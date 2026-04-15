@@ -14,4 +14,12 @@ function loadState() {
 }
 
 chrome.storage.onChanged.addListener(() => loadState());
+
+// 监听来自 content script 的加载状态请求
+window.addEventListener("message", (e) => {
+  if (e.data && e.data.type === "LC_LOAD_STATE") {
+    loadState();
+  }
+});
+
 loadState();

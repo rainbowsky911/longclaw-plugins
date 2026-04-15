@@ -39,6 +39,9 @@
     const searchBtn = wrap.querySelector(".lc-btn-search");
     const clearBtn = wrap.querySelector(".lc-btn-clear");
 
+    // 搜索框出现时自动加载状态
+    window.postMessage({ type: "LC_LOAD_STATE" }, "*");
+
     function doSearch() {
       const uri = input.value.trim();
       input.classList.toggle("active", uri.length > 0);
