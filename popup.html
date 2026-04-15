@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 280px;
+      font-family: -apple-system, "Segoe UI", sans-serif;
+      font-size: 13px;
+      color: #333;
+      background: #f5f5f5;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 14px 16px;
+    }
+    .header h1 { font-size: 14px; font-weight: 600; }
+    .header p { font-size: 11px; opacity: 0.8; margin-top: 4px; }
+
+    .content { padding: 14px 16px; }
+
+    .info-block {
+      background: #fff;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      border: 1px solid #e8e8e8;
+    }
+    .info-block h3 {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .uri-value {
+      font-size: 13px;
+      color: #333;
+      word-break: break-all;
+    }
+    .uri-value.empty { color: #ccc; }
+    .uri-value.active { color: #67c23a; font-weight: 500; }
+
+    .hint {
+      padding: 0 16px 12px;
+      font-size: 11px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Longclaw URI Search</h1>
+    <p>URI 搜索助手</p>
+  </div>
+
+  <div class="content">
+    <div class="info-block">
+      <h3>当前 URI 过滤值</h3>
+      <div id="uriValue" class="uri-value empty">未设置</div>
+    </div>
+  </div>
+
+  <div class="hint">在"选择应用接口"旁的输入框中使用</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
